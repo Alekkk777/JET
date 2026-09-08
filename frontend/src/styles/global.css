@@ -1,0 +1,84 @@
+/* Reset e base — identici al design originale (Chatbot calcolatore RAL). */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #ffffff;
+  font-family: Geist, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  color: #525252;
+}
+input,
+select,
+button,
+textarea {
+  font-family: inherit;
+}
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 1px;
+}
+
+/* Animazioni — nomi e timing identici al design originale. */
+@keyframes jetFloat {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+@keyframes jetFlyIn {
+  0% { opacity: 0; transform: translateX(-90px) translateY(24px) rotate(-14deg) scale(.86); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes trail {
+  0% { opacity: 0; transform: translateX(10px); }
+  40% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-26px); }
+}
+@keyframes riseIn {
+  0% { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes popIn {
+  0% { opacity: 0; transform: translateY(10px) scale(.97); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes blink {
+  0%, 45%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(.1); }
+}
+@keyframes dotPulse {
+  0%, 80%, 100% { opacity: .25; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-3px); }
+}
+@keyframes sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+
+/* Stati hover — nel design originale erano espressi con un attributo custom
+   (style-hover) del runtime proprietario; qui sono vere regole :hover. */
+.btn-dark:hover {
+  background: #262626;
+}
+.btn-dark-lift:hover {
+  background: #262626;
+  transform: translateY(-2px);
+}
+.pill-suggestion:hover {
+  background: #f4f4f4;
+}
+.chat-send:hover {
+  background: #262626;
+}
